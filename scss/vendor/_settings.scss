@@ -1,0 +1,47 @@
+@import "mixins";
+
+$COLOR_WHITE: #FFFFFF;
+$COLOR_ACTIVE: #7FAFF6;
+$COLOR_BUTTON: #A5C7F9;
+$COLOR_BG_APP: #C0DBD9;
+$COLOR_GREEN_DARK: #8AD191;
+$COLOR_GREEN_LIGHT: #B3F95A;
+$COLOR_BLUE_LIGHT: #88B5BF;
+$COLOR_BLUE_DARK: #0D89B0;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+
+  @include media-breakpoint(sm) {
+    max-width: 540px;
+  }
+
+  @include media-breakpoint(md) {
+    max-width: 720px;
+  }
+
+  @include media-breakpoint(lg) {
+    max-width: 960px;
+  }
+
+  @include media-breakpoint(xl) {
+    max-width: 1140px;
+  }
+
+  @include media-breakpoint(xxl) {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,28 @@
+$breakpoints-size: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin font-face($font-family, $font-path, $font-weight) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: normal;
+    src: url('#{$font-path}.eot');
+    src: url('#{$font-path}.ttf') format('truetype');
+  }
+}
+
+@mixin media-breakpoint($breakpoint) {
+  @each $breakpoints, $size in $breakpoints-size {
+    @if $breakpoint == $breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
